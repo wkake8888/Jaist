@@ -1,0 +1,29 @@
+# Q1. make a digital clock program
+
+# In the first line you are asked to input the current time
+# current time is represented by hour A(0<=A<=23), minute B(0<=B<=59), and second C(0<=C<=59)
+# In the second line you are asked to input the time passed by seconds D(0<=D<=500,000)
+# Write a program that prints the hour, minute, second in order spaced by a blank character after D seconds is passed
+
+
+# Q2. Find out which quadrant the input point is
+# You are asked to input 2 arbitrary real numbers x(-1000<=x<=1000, x!=0) and y(-1000<=y<=1000, y!=0).
+# Write a program that prints the quadrant of the coordinate plane for the given input.
+
+
+# Q3. GPA
+# Write a program that input 3 grades and print the GPA
+# Grades must match the following rules
+# A+: 4.5 A0: 4.0
+# B+: 3.5 B0: 3.0
+# C+: 2.5 C0: 2.0
+# F: 0.0
+
+
+# Q4. Add 2 binary numbers
+# You are asked to input 2 binary numbers spaced with a blank character
+# Write a program that adds 2 binary numbers and print the result as a binary number.
+# The result must start with 1.
+
+
+
