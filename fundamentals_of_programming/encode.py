@@ -39,6 +39,7 @@ def shift_lower(string, delta):
 
 def shift_code(string:str, delta:int):
     flag = True
+    shifted_str = ""
     for x in string:
         ord_x = ord(x)
         if (ord_x >= 48 and ord_x <= 57):
@@ -60,7 +61,8 @@ def shift_code(string:str, delta:int):
 
 
 def main():
-    string = input("Input a word you want to encrypt:\n")
+    text_file = open("./sample.txt", mode="r")
+    string = text_file.read()
     delta = int(input("Input delta:\n"))
     encoded_str = ""
     str_list = string.split(" ")
