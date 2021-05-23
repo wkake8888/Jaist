@@ -61,7 +61,7 @@ def shift_code(string:str, delta:int):
 
 
 def main():
-    text_file = open("./sample.txt", mode="r")
+    text_file = open("./encode_sample.txt", mode="r")
     string = text_file.read()
     delta = int(input("Input delta:\n"))
     encoded_str = ""
