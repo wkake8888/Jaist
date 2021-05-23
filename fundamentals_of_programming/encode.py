@@ -17,12 +17,6 @@ def shift_num(num, delta):
     shifted_num = ""
     index = num_list.index(num)
     shifted_index = (index + delta) % 10
-
-    # if (shifted_index > 9):
-    #     shifted_index %= 10
-    # elif (shifted_index < -10):
-    #     shifted_index %= 10
-
     shifted_num = num_list[shifted_index]
     return shifted_num
 
@@ -31,12 +25,6 @@ def shift_upper(string, delta):
     shifted_upper = ""
     index = upper_list.index(string)
     shifted_index = (index + delta) % 26
-
-    # if (shifted_index > 25):
-    #     shifted_index %= 26
-    # elif (shifted_index < -26):
-    #     shifted_index %= 26
-
     shifted_upper = upper_list[shifted_index]
     return shifted_upper
 
@@ -45,20 +33,11 @@ def shift_lower(string, delta):
     shifted_lower = ""
     index = lower_list.index(string)
     shifted_index = (index + delta) % 26
-
-    # if (shifted_index > 25):
-    #     shifted_index %= 26
-    # elif (shifted_index < -26):
-    #     shifted_index %= 26
-
     shifted_lower = lower_list[shifted_index]
     return shifted_lower
 
 
 def shift_code(string:str, delta:int):
-    # string = input("Input a word you want to encrypt:\n")
-    # delta = int(input("Input delta:\n"))
-    shifted_str = ""
     flag = True
     for x in string:
         ord_x = ord(x)
@@ -74,26 +53,26 @@ def shift_code(string:str, delta:int):
                 flag = False
                 break
 
-    print(shifted_str)
     if (flag == True):
-        return True
+        return shifted_str, True
     else:
-        return False
+        return shifted_str, False
 
 
 def main():
     string = input("Input a word you want to encrypt:\n")
     delta = int(input("Input delta:\n"))
-
+    encoded_str = ""
     str_list = string.split(" ")
 
     for x in str_list:
-        a = shift_code(x, delta)
-        if (a):
+        shifted_str, flag = shift_code(x, delta)
+        if (flag):
+            encoded_str += shifted_str + " "
             continue
         else:
             break
 
-    return
+    print(encoded_str)
 
 main()
