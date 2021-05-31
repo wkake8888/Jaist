@@ -19,7 +19,6 @@ for i in range(len(b)):
     count = b[i]
     start = c[i]
     for j in range(count):
-        d[start] = i
-        start += 1
+        d[start + j] = i
 
 print(d)
