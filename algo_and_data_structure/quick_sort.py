@@ -2,7 +2,7 @@ a = [65, 12, 46, 97, 56, 33, 75, 53, 21]
 
 def q_sort(l:list, left:int, right:int):
     if left >= right:
-        return l
+        return
     n = len(l)
     i = left
     j = right
