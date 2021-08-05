@@ -38,6 +38,9 @@ import java.util.ArrayList;
             Integer roomId = Integer.parseInt(scan.next());
             optimize(roomId);
         }
+        else {
+            System.out.println("\n##### Error ####\nYour input was wrong.");
+        }
         scan.close();
     }
 
